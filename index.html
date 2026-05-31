@@ -11,6 +11,11 @@
             padding-top: 30px;
         }
 
+        light {
+    background: white;
+    color: black;
+        }
+
          h1 {
     font-size: 40px;
     animation: fadeIn 2s;
@@ -39,6 +44,9 @@
 </head>
 <body>
     <h1>Welcome to Alim's Website 🚀</h1>
+    <button onclick="toggleTheme()">
+    🌙 Toggle Theme
+    </button>
     <h2>About Me</h2>
 <p>Hi, I'm Alim. I'm learning web development.</p>
     <button onclick="alert('Thanks for visiting my website!')">
@@ -59,6 +67,11 @@
 <p>© 2026 Alim</p>
 </body>
 </html>
+<script>
+function toggleTheme() {
+    document.body.classList.toggle("light");
+}
+</script>
 <body>
     <br><br>
     
