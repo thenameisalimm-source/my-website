@@ -45,16 +45,12 @@
     border: 1px solid rgba(255,255,255,0.2);
             }
         .typing {
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: none;
-    width: 0;
-    animation: typing 1.2s steps(20, end) forwards;
+     animation: fadeIn 1s ease-in;
 }
 
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
     </style>
 </head>
