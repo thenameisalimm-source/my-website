@@ -68,14 +68,37 @@
 
             box-shadow: 0 0 25px rgba(255,255,255,0.8);
         }
+
+        nav {
+    margin-bottom: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #22c55e;
+}
     </style>
 </head>
 <body>
+
+    <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#goals">Goals</a>
+    </nav>
+    
     
     <img src="IMG_20260601_035434.jpg" class="logo">
     
     <h1>Welcome to Alim's Website 🚀</h1>
-    <h2>About Me</h2>
+    <h2 id="about">About Me</h2>
 <p class="typing">Hi, I'm Alim. I'm learning web development.</p>
     
     <p><i>"Every expert was once a beginner."</i></p>
@@ -87,17 +110,17 @@
         <button onclick="window.open('https://github.com/thenameisalimm-source')">
    🔥 My GitHub
         </button>
-        <h2>My Skills</h2>
+        <h2 id="skills">My Skills</h2>
 <div class="skill">🌐 HTML</div>
 <div class="skill">🎨 CSS</div>
 <div class="skill">🚀 GitHub Pages</div>
 
-<h2>Projects</h2>
+<h2 id="projects">Projects</h2>
 <div class="skill">✅ My First Website</div>
 <div class="skill">🎮 Future Game Website</div>
 <div class="skill">📱 Portfolio Website</div>
 
-    <h2>Achievements & Goals</h2>
+    <h2 id="goals">Achievements & Goals</h2>
 
 <div class="skill">🏆 Built my first website</div>
 <div class="skill">🎯 Learn JavaScript</div>
