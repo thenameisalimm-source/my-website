@@ -223,14 +223,19 @@ function updateClock() {
     hour12: true
 });
 }
+        function topFunction() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+        }
 
 setInterval(updateClock, 1000);
 updateClock();
     </script>
 
-    <button id="topBtn"
-onclick="window.scrollTo({top:0, behavior:'smooth'})">
-⬆️
+    <button id="topBtn" onclick="topFunction()">
+↑
     </button>
     
 </body>
