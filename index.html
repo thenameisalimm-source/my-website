@@ -155,7 +155,7 @@ nav a:hover {
     
     <img src="IMG_20260601_035434.jpg" class="logo">
     
-    <h1>Welcome to Alim's Website 🚀</h1>
+    <h1 id="welcome"></h1>
     
     <p>👋 Welcome to my portfolio website!</p>
     <p id="typing"></p>
@@ -163,7 +163,7 @@ nav a:hover {
     <p id="clock"></p>
     
     <h2 id="about">About Me</h2>
-<p class="typing">Hi, I'm Alim. I'm learning web development.</p>
+    <p id="aboutText"></p>
     
     <p><i>"Every expert was once a beginner."</i></p>
     
@@ -215,7 +215,32 @@ function typeWriter() {
     }
 }
 
-typeWriter();
+typeWelcome();
+
+setTimeout(typeAbout, 2500);
+
+setTimeout(typeWriter, 5000);
+        const welcomeText = "Welcome to Alim's Website 🚀";
+let w = 0;
+
+function typeWelcome() {
+    if (w < welcomeText.length) {
+        document.getElementById("welcome").innerHTML += welcomeText.charAt(w);
+        w++;
+        setTimeout(typeWelcome, 80);
+    }
+}
+
+const aboutText = "Hi, I'm Alim. I'm learning web development.";
+let a = 0;
+
+function typeAbout() {
+    if (a < aboutText.length) {
+        document.getElementById("aboutText").innerHTML += aboutText.charAt(a);
+        a++;
+        setTimeout(typeAbout, 50);
+    }
+}
         
 
 setInterval(updateClock, 1000);
