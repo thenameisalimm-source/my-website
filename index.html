@@ -119,6 +119,13 @@ nav a:hover {
                  0 0 15px #22c55e;
         }
         
+        #clock {
+    color: #22c55e;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+        }
+        
     </style>
 </head>
 <body>
@@ -138,6 +145,8 @@ nav a:hover {
     
     <p>👋 Welcome to my portfolio website!</p>
 <p class="hero-text">🚀 Future Full-Stack Developer</p>
+
+    <p id="clock"></p>
     
     <h2 id="about">About Me</h2>
 <p class="typing">Hi, I'm Alim. I'm learning web development.</p>
@@ -171,10 +180,19 @@ nav a:hover {
 <hr>
 
 <p>Made with ❤️ by Alim</p>
+    
+    <script>
+function updateClock() {
+    document.getElementById("clock").innerHTML =
+        new Date().toLocaleTimeString();
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+    </script>
+    
 </body>
 </html>
-<body>
-    <br><br>
     
     
 
