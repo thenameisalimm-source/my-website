@@ -120,9 +120,10 @@ nav a:hover {
         }
         
         #clock {
-    color: #22c55e;
-    font-size: 20px;
+    color: #00e5ff;
+    font-size: 22px;
     font-weight: bold;
+    text-shadow: 0 0 10px #00e5ff;
     margin: 10px 0;
         }
         
@@ -184,7 +185,12 @@ nav a:hover {
     <script>
 function updateClock() {
     document.getElementById("clock").innerHTML =
-        new Date().toLocaleTimeString();
+        new Date().toLocaleTimeString('en-US', {
+    hour: 'numeric',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: true
+});
 }
 
 setInterval(updateClock, 1000);
