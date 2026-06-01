@@ -133,6 +133,12 @@ nav a:hover {
     margin: 10px 0;
         }
 
+        #typing {
+    color: #22c55e;
+    font-weight: bold;
+    text-shadow: 0 0 10px #22c55e;
+        }
+
         
     </style>
 </head>
@@ -152,7 +158,7 @@ nav a:hover {
     <h1>Welcome to Alim's Website 🚀</h1>
     
     <p>👋 Welcome to my portfolio website!</p>
-<p class="hero-text">🚀 Future Full-Stack Developer</p>
+    <p id="typing"></p>
 
     <p id="clock"></p>
     
@@ -198,7 +204,19 @@ function updateClock() {
     second: '2-digit',
     hour12: true
 });
+}const text = "🚀 Future Full-Stack Developer";
+let i = 0;
+
+function typeWriter() {
+    if (i < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 100);
+    }
 }
+
+typeWriter();
+        
 
 setInterval(updateClock, 1000);
 updateClock();
