@@ -132,6 +132,20 @@ nav a:hover {
     text-shadow: 0 0 10px #00e5ff;
     margin: 10px 0;
         }
+
+        #topBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #22c55e;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    box-shadow: 0 0 10px #22c55e;
+        }
         
     </style>
 </head>
@@ -202,6 +216,11 @@ function updateClock() {
 setInterval(updateClock, 1000);
 updateClock();
     </script>
+
+    <button id="topBtn"
+onclick="window.scrollTo({top:0, behavior:'smooth'})">
+⬆️
+    </button>
     
 </body>
 </html>
