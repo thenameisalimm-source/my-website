@@ -133,31 +133,6 @@ nav a:hover {
     margin: 10px 0;
         }
 
-        #topBtn {
-    position: fixed;
-    bottom: 250px;
-    right: 15px;
-    z-index: 9999;
-
-    width: 55px;
-    height: 55px;
-
-    border: none;
-    border-radius: 50%;
-
-    background: #22c55e;
-    color: white;
-    font-size: 24px;
-
-    box-shadow: 0 0 15px #22c55e;
-
-    cursor: pointer;
-    z-index: 9999;
-        }
-
-        #topBtn:hover {
-    transform: scale(1.1);
-        }
         
     </style>
 </head>
@@ -224,20 +199,11 @@ function updateClock() {
     hour12: true
 });
 }
-        function topFunction() {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-        }
 
 setInterval(updateClock, 1000);
 updateClock();
     </script>
 
-    <button id="topBtn" onclick="topFunction()">
-🚀
-    </button>
     
 </body>
 </html>
