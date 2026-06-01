@@ -165,6 +165,11 @@ nav a:hover {
     box-shadow: 0 0 10px #22c55e;
         }
 
+        #quote {
+    color: white;
+    transition: 0.5s;
+        }
+
         
     </style>
 </head>
@@ -195,7 +200,7 @@ nav a:hover {
     <h2 id="about">About Me</h2>
     <p id="aboutText"></p>
     
-    <p><i>"Every expert was once a beginner."</i></p>
+    <p id="quote"><i>"Every expert was once a beginner."</i></p>
     
     <h2>Contact Me</h2>
 <a href="mailto:sudamaniyaaleem136@gmail.com">
@@ -275,6 +280,28 @@ setTimeout(typeWriter, 5000);
 
 setInterval(updateClock, 1000);
 updateClock();
+
+        const quotes = [
+    '"Every expert was once a beginner."',
+    '"Code. Learn. Build."',
+    '"Small steps every day."',
+    '"Dream big. Start small."'
+];
+
+let quoteIndex = 0;
+
+function changeQuote() {
+    document.getElementById("quote").innerHTML =
+        "<i>" + quotes[quoteIndex] + "</i>";
+
+    quoteIndex++;
+
+    if (quoteIndex >= quotes.length) {
+        quoteIndex = 0;
+    }
+}
+
+setInterval(changeQuote, 3000);
     </script>
 
     
